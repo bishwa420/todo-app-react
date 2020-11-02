@@ -1,0 +1,12 @@
+h1 {
+    background: #abe7ea75;
+    text-align: center;
+}
+
+.TodoList {
+    text-align: left;
+    padding-left: 30em;
+}
+
+input[type='checkbox'] {
+}

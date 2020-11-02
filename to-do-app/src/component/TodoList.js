@@ -1,8 +1,10 @@
 import React from "react"
 
+import '../style/styles.css'
+
 function TodoList() {
     return (
-        <div>
+        <div className="TodoList">
             <input type="checkbox" id="swimming" name="swimming" value="swimming"/>
             <label htmlFor="swimming">Swimming</label>
             <br/>
