@@ -16,7 +16,7 @@ function Header() {
     return (
         <div>
             <h1>Good {greetingMessage}!</h1> <br/>
-            <h1>TODO list</h1>
+            <h1 style={{backgroundColor: "yellow", color: "orange"}}>TODO list</h1>
         </div>
     )
 }
