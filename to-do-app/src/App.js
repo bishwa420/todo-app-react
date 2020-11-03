@@ -1,13 +1,15 @@
 import React from "react"
 
 import Header from "./component/Header"
-import TodoList from "./component/TodoList"
+import TodoItem from "./component/TodoItem"
 
 function App() {
   return (
-      <div>
-          <Header/>
-          <TodoList/>
+      <div className="todo-list">
+          <TodoItem/>
+          <TodoItem/>
+          <TodoItem/>
+          <TodoItem/>
       </div>
   )
 }
