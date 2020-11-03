@@ -2,12 +2,12 @@ import React from "react"
 
 import '../style/styles.css'
 
-function TodoItem() {
+function TodoItem(props) {
 
     return (
         <div className="todo-item">
-            <input type="checkbox" id="swimming" name="swimming" value="swimming"/>
-            <label htmlFor="swimming">Swimming</label>
+            <input type="checkbox" id={props.id} name={props.name} value={props.value}/>
+            <label htmlFor={props.id}>{props.name}</label>
         </div>
     )
 }
