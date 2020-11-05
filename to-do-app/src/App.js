@@ -1,11 +1,12 @@
 import React from "react"
 
-import Header from "./component/Header"
+import Joke from "./component/Joke"
 import TodoItem from "./component/TodoItem"
 
 function App() {
   return (
       <div className="todo-list">
+          <Joke question="How do you do?" punch="Fine!"/>
           <TodoItem
               id = "swimming"
               name = "swimming"
