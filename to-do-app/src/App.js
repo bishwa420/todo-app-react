@@ -28,10 +28,19 @@ function App() {
 
 class App extends React.Component{
 
+    constructor() {
+        super();
+        this.state = {
+            name: "Bishwajit Purkaystha",
+            age: "21"
+        }
+    }
+
     render() {
         const todoData = todoItemData.map(d => <TodoItem data = {d}/>)
         return (
             <div className="todo-list">
+                <h3>Name is: {this.state.name}, age is: {this.state.age} old</h3>
                 {this.props.whatever}
                 {todoData}
             </div>
