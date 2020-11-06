@@ -32,17 +32,19 @@ class App extends React.Component{
         super();
         this.state = {
             name: "Bishwajit Purkaystha",
-            age: "21"
+            age: "21",
+            loggedIn: false,
+            todoData: todoItemData.map(d => <TodoItem data = {d} />)
         }
     }
 
     render() {
-        const todoData = todoItemData.map(d => <TodoItem data = {d}/>)
+        //const todoData = todoItemData.map(d => <TodoItem data = {d}/>)
         return (
             <div className="todo-list">
+                <h1>You are logged {this.state.loggedIn ? "in" : "out"}</h1>
                 <h3>Name is: {this.state.name}, age is: {this.state.age} old</h3>
-                {this.props.whatever}
-                {todoData}
+                {this.state.todoData}
             </div>
         );
     }
