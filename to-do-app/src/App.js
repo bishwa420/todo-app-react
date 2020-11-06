@@ -36,12 +36,20 @@ class App extends React.Component{
             loggedIn: false,
             todoData: todoItemData.map(d => <TodoItem data = {d} />)
         }
+        this.handleMouseOverOnImage = this.handleMouseOverOnImage.bind(this);
+    }
+
+    handleMouseOverOnImage() {
+        console.log("Image is hovered...")
     }
 
     render() {
         //const todoData = todoItemData.map(d => <TodoItem data = {d}/>)
         return (
             <div className="todo-list">
+                <img src="https://www.fillmurray.com/200/100"
+                    onMouseOver={this.handleMouseOverOnImage}/>
+                <br/><br/>
                 <h1>You are logged {this.state.loggedIn ? "in" : "out"}</h1>
                 <h3>Name is: {this.state.name}, age is: {this.state.age} old</h3>
                 {this.state.todoData}
