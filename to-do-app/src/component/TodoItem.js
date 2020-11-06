@@ -6,8 +6,8 @@ function TodoItem(props) {
 
     return (
         <div className="todo-item">
-            <input type="checkbox" id={props.id} name={props.name} value={props.value}/>
-            <label htmlFor={props.id}>{props.name}</label>
+            <input type="checkbox" id={props.data.id} name={props.data.name} value={props.data.value}/>
+            <label htmlFor={props.data.id}>{props.data.name}</label>
         </div>
     )
 }
