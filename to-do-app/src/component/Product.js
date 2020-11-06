@@ -1,14 +1,16 @@
 import React from "react"
 
-function Product(props) {
+class Product extends React.Component {
 
-    return (
-        <ul>
-            <li>Name: {props.name}</li>
-            <li>Price: {props.price}</li>
-            <li>Description: {props.description}</li>
-        </ul>
-    )
+    render() {
+        return (
+            <ul>
+                <li>Name: {this.props.name}</li>
+                <li>Price: {this.props.price}</li>
+                <li>Description: {this.props.description}</li>
+            </ul>
+        )
+    }
 }
 
 export default Product

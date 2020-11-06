@@ -7,6 +7,7 @@ import productData from "./component/ProductData"
 import Product from "./component/Product"
 import todoItemData from "./component/todoItemData"
 
+/*
 function App() {
     const jokeData = JokeData.map(d => <Joke key = {d.id}
                                              question = {d.question}
@@ -15,13 +16,28 @@ function App() {
                                              name = {d.name}
                                              description = {d.description}
                                              price = {d.price}/>)
-    const todoData = todoItemData.map(d => <TodoItem data = {d}/>)
+
 
   return (
       <div className="todo-list">
           {todoData}
       </div>
   )
+}
+*/
+
+class App extends React.Component{
+
+    render() {
+        const todoData = todoItemData.map(d => <TodoItem data = {d}/>)
+        return (
+            <div className="todo-list">
+                {this.props.whatever}
+                {todoData}
+            </div>
+        );
+    }
+
 }
 
 export default App
