@@ -1,23 +1,23 @@
 const todoItemData = [
     {
-        id: 1,
+        key: 1,
         name: "swimming",
         value: "swimming",
         checked: true
     },
     {
-        id: 2,
+        key: 2,
         name: "drinking",
         value: "drinking"
     },
     {
-        id: 3,
+        key: 3,
         name: "walking",
         value: "walking",
         checked: false
     },
     {
-        id: 4,
+        key: 4,
         name: "trekking",
         value: "trekking"
     }
