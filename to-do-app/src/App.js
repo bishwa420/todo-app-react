@@ -6,6 +6,7 @@ import JokeData from "./component/JokeData"
 import productData from "./component/ProductData"
 import Product from "./component/Product"
 import todoItemData from "./component/todoItemData"
+import ChangingStateExample from "./component/ChangingStateExample"
 
 /*
 function App() {
@@ -47,6 +48,7 @@ class App extends React.Component{
         //const todoData = todoItemData.map(d => <TodoItem data = {d}/>)
         return (
             <div className="todo-list">
+                <ChangingStateExample/>
                 <img src="https://www.fillmurray.com/200/100"
                     onMouseOver={this.handleMouseOverOnImage}/>
                 <br/><br/>
