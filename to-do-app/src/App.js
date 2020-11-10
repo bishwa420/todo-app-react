@@ -1,7 +1,7 @@
 import React from "react"
 
-import TodoItem from "./component/TodoItem"
-import todoItemData from "./component/todoItemData"
+
+import ConditionalRendering from "./component/ConditionalRendering";
 
 
 class App extends React.Component{
@@ -9,37 +9,25 @@ class App extends React.Component{
     constructor() {
         super()
         this.state = {
-            todos: todoItemData
+            isLoading: true
         }
-        this.handleChange = this.handleChange.bind(this)
     }
 
-    handleChange(id) {
+    componentDidMount() {
 
-        this.setState(prevState => {
-            const updatedTodos = prevState.todos.map(todo => {
-                if(todo.id === id) {
-                    todo.completed = !todo.completed
-                }
-                return todo
+        setTimeout(() => {
+            this.setState({
+                isLoading: false
             })
-
-            return {
-                todos: updatedTodos
-            }
-        })
+        }, 2000)
     }
 
     render() {
-        const todoData = this.state.todos.map(d => <TodoItem
-            key = {d.key}
-            data = {d}
-            handleChange = {this.handleChange}/>)
         return (
-            <div className="todo-list">
-                {todoData}
+            <div>
+                {this.state.isLoading ? <h1>Loading...</h1> : <ConditionalRendering/>}
             </div>
-        );
+        )
     }
 
 }
