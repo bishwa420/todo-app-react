@@ -1,7 +1,8 @@
 import React from "react"
 
 
-import ConditionalRenderingPractice from "./component/ConditionalRenderingPractice";
+import ConditionalRenderingPractice from "./component/ConditionalRenderingPractice"
+import ConditionalRendering from "./component/ConditionalRendering"
 
 
 class App extends React.Component{
@@ -26,6 +27,7 @@ class App extends React.Component{
         return (
             <div>
                 <ConditionalRenderingPractice/>
+                <ConditionalRendering/>
             </div>
         )
     }

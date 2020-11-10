@@ -10,15 +10,19 @@ class TodoItem extends React.Component{
     }
 
     render() {
+
         return (
             <div className="todo-item">
                 <input type="checkbox"
-                       id={this.props.data.key}
+                       key = {this.props.data.key}
+                       id={this.props.data.id}
                        name={this.props.data.name}
                        value={this.props.data.value}
-                       checked={this.props.data.checked}
-                       onChange={() => this.props.handleChange(this.props.data.key)}/>
-                <label htmlFor={this.props.data.key}>{this.props.data.name}</label>
+                       checked={this.props.data.completed}
+                       onChange={() => this.props.handleChange(this.props.data.id)}/>
+                <label htmlFor={this.props.data.key}
+                       style={this.props.data.completed ? {color: 'green'} : {color: 'red'}}>
+                    {this.props.data.name}</label>
             </div>
         )
     }

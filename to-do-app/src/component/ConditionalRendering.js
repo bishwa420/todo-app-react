@@ -14,24 +14,25 @@ class ConditionalRendering extends Component{
 
     handleChange(id) {
 
-        this.setState(prevState => {
-            const updatedTodos = prevState.todos.map(todo => {
-                if(todo.id === id) {
-                    todo.completed = !todo.completed
-                }
-                return todo
-            })
+        console.log('handle change method called')
+        const updatedTodos = this.state.todos.map(todo => {
 
-            return {
-                todos: updatedTodos
+            console.log('todo.id: ' + todo.id + ' id: ' + id)
+            if(todo.id === id) {
+                todo.completed = !todo.completed
+                console.log('id: ' + id + ' completed: ' + todo.completed)
             }
+            return todo
         })
+        this.setState({
+            todos: updatedTodos
+        }, () => console.log('state: ' + JSON.stringify(this.state.todos)))
     }
 
 
     render() {
         const todoData = this.state.todos.map(d => <TodoItem
-            key = {d.key}
+            key = {d.id}
             data = {d}
             handleChange = {this.handleChange}/>)
         return (
