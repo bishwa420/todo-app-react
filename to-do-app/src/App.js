@@ -1,7 +1,7 @@
 import React from "react"
 
 
-import ConditionalRendering from "./component/ConditionalRendering";
+import ConditionalRenderingPractice from "./component/ConditionalRenderingPractice";
 
 
 class App extends React.Component{
@@ -25,7 +25,7 @@ class App extends React.Component{
     render() {
         return (
             <div>
-                {this.state.isLoading ? <h1>Loading...</h1> : <ConditionalRendering/>}
+                <ConditionalRenderingPractice/>
             </div>
         )
     }
