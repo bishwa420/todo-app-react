@@ -1,25 +1,27 @@
 const todoItemData = [
     {
-        key: 1,
+        id: 1,
         name: "swimming",
         value: "swimming",
-        checked: true
+        completed: true
     },
     {
-        key: 2,
+        id: 2,
         name: "drinking",
-        value: "drinking"
+        value: "drinking",
+        completed: false
     },
     {
-        key: 3,
+        id: 3,
         name: "walking",
         value: "walking",
-        checked: false
+        completed: false
     },
     {
-        key: 4,
+        id: 4,
         name: "trekking",
-        value: "trekking"
+        value: "trekking",
+        completed: false
     }
 ]
 
